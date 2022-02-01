@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Your Horoscope</title>
 </head>
+
 <body>
     <header>
         <h1>Your Horoscope</h1>
-        <p>The relative position of the planets and the stars have a special deep significance or meaning that exclusively applies to only you!</p>
+        <p>Your Guaranteed* Fate** for Today***™</p>
     </header>
     <label for="signs">Choose your sign:</label>
     <select name="signs" id="signs">
@@ -26,9 +31,18 @@
       <option value="Aquarius">Aquarius</option>
       <option value="Pisces">Pisces</option>
     </select>
-    <p>Not sure what your sign is? Simply select your birthday instead:</p>
-<button id="generate-horoscope">Tell Me My Fortune</button>
 
+    <p>Not sure what your sign is? Simply select your birthday instead:</p>
+    <input type="date">
+
+    <h3>Your horoscope for today...</h3>
+    <div id="horoscope-container"></div>
+
+    <button id="generate-horoscope">Tell Me My Fortune</button>
+
+    <p>Horoscope © 2,000 BCE</p>
+    <p>Remember, the relative position of the planets and the stars have a special deep significance or meaning that exclusively applies to only you!</p>
 <h4><a href="https://www.youtube.com/watch?v=XjlD6yYq5as" target="_blank">♪♫ That's your horoscope for today ♫♪</a></h4>
 </body>
+<script src="script.js"></script>
 </html>
