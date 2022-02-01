@@ -12,22 +12,18 @@
 </head>
 
 <body>
-<header class="w3-container w3-blue w3-center" style="padding:48px 16px">
-    <h1 class="w3-margin w3-jumbo">Your Horoscope</h1>
-    <p>Your Guaranteed* Fate** for Today***™</p>
+    <header class="w3-container w3-blue w3-center" style="padding:24px 12px">
+        <h1 class="w3-margin w3-jumbo">Your Horoscope</h1>
+        <p>Your Guaranteed* Fate** for Today***™</p>
+    </header>
 
-  </header>
-
-  <!-- First Grid -->
-  <div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-row-padding w3-padding-32 w3-container">
     <div class="w3-content">
       <div class="w3-twothird">
         <h1>Lorem Ipsum</h1>
-        <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+        <h5 class="w3-padding-16">Text.</h5>
   
-        <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p class="w3-text-grey">More text.</p>
 
           <label for="signs">Choose your sign:</label>
           <select name="signs" id="signs">
@@ -44,33 +40,34 @@
             <option value="Aquarius">Aquarius</option>
             <option value="Pisces">Pisces</option>
           </select>
+          <p>Not sure what your sign is? Simply select your birthday instead: <input type="date"></p>
+          <p id="horoscope-container" style="padding: 10px; border: 2px solid black;">THE STARS SAY..</p>
+          <button id="generate-horoscope">Tell Me My Fortune</button>
       </div>
     </div>
   </div>
   
   <!-- Second Grid -->
-  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
     <div class="w3-content">
   
       <div class="w3-twothird">
         <h1>Lorem Ipsum</h1>
-        <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+        <h5 class="w3-padding-16">Text.</h5>
   
-        <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p class="w3-text-grey"><a href="https://www.youtube.com/watch?v=XjlD6yYq5as" target="_blank">♪♫ That's your horoscope for today ♫♪</a></p>
       </div>
     </div>
   </div>
   
-  <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+  <div class="w3-container w3-black w3-center w3-opacity w3-padding-24">
       <p>Horoscope © 2,000 BCE</p>
       <p>Remember, the relative position of the planets and the stars have a special deep significance or meaning that exclusively applies to only you!</p>
   </div>
   
   <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
-    <div class="w3-xlarge w3-padding-32">
+  <footer class="w3-container w3-padding-16 w3-center w3-opacity">  
+    <div class="w3-xlarge w3-padding-12">
       <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i> -->
       <!-- <i class="fa fa-instagram w3-hover-opacity"></i> -->
       <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
@@ -82,19 +79,10 @@
    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
   </footer>
 
-    <p>Not sure what your sign is? Simply select your birthday instead:</p>
-    <input type="date">
-
-    <h3>Your horoscope for today...</h3>
-    <div id="horoscope-container"></div>
-
-    <button id="generate-horoscope">Tell Me My Fortune</button>
-
     <!-- <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
         <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
     </div> -->
 
-    <h4><a href="https://www.youtube.com/watch?v=XjlD6yYq5as" target="_blank">♪♫ That's your horoscope for today ♫♪</a></h4>
 </body>
 <script src="script.js"></script>
 </html>
