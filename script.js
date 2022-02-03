@@ -10,9 +10,10 @@ const horoscopeBeginning = [
 ];
 const horoscopeMiddle = [
   "and your favorite food",
-  "and, suddenly, your entire family",
+  "and your entire family and a few of their pets",
   "and your doppelgänger",
   "with tidings both fair and foul: The Grand Cosmic Space Cube",
+  "the 2005 principal tour production of Billy Elliot",
 ];
 const horoscopeEnd = [
   "will swallow you whole.",
