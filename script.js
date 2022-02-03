@@ -3,16 +3,16 @@ const generateButton = document.querySelector("#generate-horoscope");
 const getSign = document.querySelector("#signs").value;
 
 const horoscopeBeginning = [
-  "A mysterious stranger will approach you ",
-  "You will wake up ",
-  "You will find a most enchanting orb ",
-  "Your third favorite cousin ",
+  "A mysterious stranger will approach you",
+  "You will wake up",
+  "You will find a most enchanting orb",
+  "Your third favorite cousin",
 ];
 const horoscopeMiddle = [
-  "and your favorite food ",
-  "and, suddenly, your entire family ",
-  "and your doppelgänger ",
-  "with tidings both fair and foul: The Grand Cosmic Space Cube ",
+  "and your favorite food",
+  "and, suddenly, your entire family",
+  "and your doppelgänger",
+  "with tidings both fair and foul: The Grand Cosmic Space Cube",
 ];
 const horoscopeEnd = [
   "will swallow you whole.",
@@ -24,17 +24,16 @@ const randomBeg = Math.floor(Math.random() * horoscopeBeginning.length);
 const randomMid = Math.floor(Math.random() * horoscopeMiddle.length);
 const randomEnd = Math.floor(Math.random() * horoscopeEnd.length);
 
-const newHoroscope =
-  horoscopeBeginning[randomBeg] +
-  horoscopeMiddle[randomMid] +
-  horoscopeEnd[randomEnd];
+const newHoroscope = `${getSign.toUpperCase()}: ${
+  horoscopeBeginning[randomBeg]
+} ${horoscopeMiddle[randomMid]} ${horoscopeEnd[randomEnd]}`;
 
 const horoscopeAsString = document.createTextNode(newHoroscope);
 
 function spinMyWebOfFate() {
-  console.log(getSign);
+  // console.log(getSign);
   displayHoroscope.innerText = newHoroscope;
-  console.log(newHoroscope);
+  // console.log(newHoroscope);
 }
 
 // ----------------------------------------------------------------
@@ -51,3 +50,9 @@ function myFunction() {
   demo.appendChild(txt);
   document.body.appendChild(demo);
 }
+
+// const newHoroscope =
+//   getSign +
+//   horoscopeBeginning[randomBeg] +
+//   horoscopeMiddle[randomMid] +
+//   horoscopeEnd[randomEnd];
