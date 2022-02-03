@@ -39,8 +39,8 @@
           </select>
         </h5>
         <p class="w3-text-grey">Not sure what your sign is? Select your birthday instead: <input type="date"></p>
-        <p>Your sign is: </p>
-        <button id="generate-horoscope">Tell Me My Fortune</button>
+        <!-- <p>Your sign is: </p> -->
+        <button id="generate-horoscope" onclick="spinMyWebOfFate()">Tell Me My Fortune</button>
       </div>
     </div>
   </div>
@@ -49,7 +49,8 @@
     <div class="w3-content">
       <div class="w3-twothird">
         <h1>The stars say...</h1>
-        <p class="w3-padding-16" id="horoscope-container" style="padding: 10px; border: 2px solid black;">(Your fortune here)</p>
+        <!-- <p class="w3-padding-16" id="horoscope-container" style="padding: 10px; border: 2px solid black;">(Your fortune here)</p> -->
+        <textarea class="w3-padding-16" id="horoscope-container" style="padding: 10px; border: 2px solid black;" rows="6" cols="100" readonly>(Your fortune here)</textarea>
         <p class="w3-text-grey" style="font-size: 12px;"><a href="https://www.youtube.com/watch?v=XjlD6yYq5as" target="_blank">♪♫ That's your horoscope for today ♫♪</a></p>
       </div>
     </div>
@@ -75,3 +76,6 @@
 </body>
 <script src="script.js"></script>
 </html>
+
+<p>This is the example where we are working with P tag from HTML. So whenever we are going to click button so it will display text from P tag.</p>
+<button onclick="myFunction()">Click Here</button>
