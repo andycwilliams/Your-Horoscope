@@ -45,25 +45,8 @@ function myFunction() {
 }
 
 function spinMyWebOfFate() {
-
-  
-  // displayHoroscope.appendChild("TEST TEST TEST 3");
-  // document.getElementById("#horoscope-container").appendChild("TEST 44444");
-
-  // const newLine = document.createElement("p");
-  // var txt = document.createTextNode("TEST TEXT");
-  // horoscopeAsString.appendChild(txt);
-  // // document.body.appendChild(" ");
-  // document.body.appendChild("TEST AGAIN");
-  // // document.body.appendChild(displayHoroscope);
-  // document.body.appendChild(horoscopeAsString);
-
-  // const newHoroscope =
-  //   horoscopeBeginning[randomBeg] +
-  //   horoscopeMiddle[randomMid] +
-  //   horoscopeEnd[randomEnd];
+  displayHoroscope.innerText = newHoroscope;
   console.log(newHoroscope);
-  //   displayHoroscale.appendChild(newHoroscope);
 }
 
 function myFunction2() {
