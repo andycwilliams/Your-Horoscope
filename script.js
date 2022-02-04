@@ -2,6 +2,22 @@ const displayHoroscope = document.querySelector("#horoscope-container");
 const generateButton = document.querySelector("#generate-horoscope");
 const getSign = document.querySelector("#signs").value;
 // const strangeAlbert = document.querySelector("#strangeAlbert");
+const signsArray = [
+  "Aries",
+  "Taurus",
+  "Gemini",
+  "Cancer",
+  "Leo",
+  "Virgo",
+  "Libra",
+  "Scorpio",
+  "Sagittarius",
+  "Capricorn",
+  "Aquarius",
+  "Pisces",
+];
+
+console.log(getSign);
 
 const horoscopeSubject = [
   "Your third favorite cousin",
@@ -24,7 +40,7 @@ const horoscopeBeginning = [
 const horoscopeMiddle = [
   "your favorite food",
   "with tidings both fair and foul: The Grand Cosmic Space Cube speaks to you",
-  "and get into a two-day long fist fight",
+  "and get into a two-day long fistfight",
 ];
 const horoscopeEnd = [
   "ERROR_405: We're sorry, the 7th moon is in retrograde. Please check your fortune again later. We apologize for any inconvenience or summoning portals opened.",
@@ -35,22 +51,22 @@ const horoscopeEnd = [
   "challenge you to an arm wrestling contest. You will lose dozens of times in a row. Then, finally, one time you will feel like it's going to be different. You feel different. Stronger, more capable. Your opponent seems fatigued. Are they giving up? You press the advantage. After half an hour it seems like they're going to yield. Sweat erupts from their every pore. You're also wearing out but gosh darn are you DETERMINED. Then suddenly they SLAM your arm to the other side, spraining it in three places. Everyone is laughing. Your parents are laughing the hardest.",
 ];
 
-const randomSub = Math.floor(Math.random() * horoscopeSubject.length);
-const randomBeg = Math.floor(Math.random() * horoscopeBeginning.length);
-const randomMid = Math.floor(Math.random() * horoscopeMiddle.length);
-const randomEnd = Math.floor(Math.random() * horoscopeEnd.length);
-
-const newHoroscope = `${getSign.toUpperCase()}: ${
-  horoscopeSubject[randomSub]
-} ${horoscopeBeginning[randomBeg]} ${horoscopeMiddle[randomMid]} ${
-  horoscopeEnd[randomEnd]
-}`;
-
-const horoscopeAsString = document.createTextNode(newHoroscope);
-
 function spinMyWebOfFate() {
-  // console.log(getSign);
-  displayHoroscope.innerText = newHoroscope;
+  const randomSub = Math.floor(Math.random() * horoscopeSubject.length);
+  const randomBeg = Math.floor(Math.random() * horoscopeBeginning.length);
+  const randomMid = Math.floor(Math.random() * horoscopeMiddle.length);
+  const randomEnd = Math.floor(Math.random() * horoscopeEnd.length);
+
+  const newHoroscope = `${getSign.toUpperCase()}: ${
+    horoscopeSubject[randomSub]
+  } ${horoscopeBeginning[randomBeg]} ${horoscopeMiddle[randomMid]} ${
+    horoscopeEnd[randomEnd]
+  }`;
+
+  console.log(getSign);
+  // console.log(signsArray[getSign - 1]);
+  // displayHoroscope.innerHTML = "";
+  displayHoroscope.innerHTML = newHoroscope;
   // console.log(newHoroscope);
 }
 
