@@ -48,11 +48,7 @@ function spinMyWebOfFate() {
     horoscopeEnd[randomEnd]
   }`;
 
-  console.log(getSign);
-  // console.log(signsArray[getSign - 1]);
-  // displayHoroscope.innerHTML = "";
   displayHoroscope.innerHTML = newHoroscope;
-  // console.log(newHoroscope);
 
   if (strangeAlbert.style.display === "none") {
     strangeAlbert.style.display = "block";
