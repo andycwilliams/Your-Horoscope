@@ -56,6 +56,7 @@ function spinMyWebOfFate() {
   const randomBeg = Math.floor(Math.random() * horoscopeBeginning.length);
   const randomMid = Math.floor(Math.random() * horoscopeMiddle.length);
   const randomEnd = Math.floor(Math.random() * horoscopeEnd.length);
+  const strangeAlbert = document.querySelector("#strangeAlbert");
 
   const newHoroscope = `${getSign.toUpperCase()}: ${
     horoscopeSubject[randomSub]
@@ -68,6 +69,12 @@ function spinMyWebOfFate() {
   // displayHoroscope.innerHTML = "";
   displayHoroscope.innerHTML = newHoroscope;
   // console.log(newHoroscope);
+
+  if (strangeAlbert.style.display === "block") {
+    strangeAlbert.style.display = "block";
+  } else {
+    strangeAlbert.style.display = "none";
+  }
 }
 
 // ----------------------------------------------------------------
