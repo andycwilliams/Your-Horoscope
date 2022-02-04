@@ -1,8 +1,8 @@
 # Your-Horoscope
 
-Horoscope generator
+Fully accurate Horoscope generator with guaranteed results.
 
-TODO: Consider adding dark mode, logo, other photos, animation, sound effects, etc.
+TODO: Make mobile-friendly. Consider adding dark mode, logo, other photos, animation, sound effects, etc.
 
 Now you may find it inconceivable or at the very least a bit unlikely that the relative position of the planets and the stars could have a special deep significance or meaning that exclusively applies to only you but let me give you my assurance that these forecasts and predictions are all based on solid, scientific, documented evidence, so you would have to be some kind of moron not to realize that every single one of them is absolutely true.
 
