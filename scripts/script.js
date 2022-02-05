@@ -41,6 +41,7 @@ function spinMyWebOfFate() {
   const randomEnd = Math.floor(Math.random() * horoscopeEnd.length);
   const strangeAlbert = document.querySelector("#strangeAlbert");
   const getSign = document.querySelector("#signs").value;
+  const determineSign = document.querySelector("#determineSign");
 
   const newHoroscope = `${getSign.toUpperCase()}: ${
     horoscopeSubject[randomSub]
@@ -48,6 +49,11 @@ function spinMyWebOfFate() {
     horoscopeEnd[randomEnd]
   }`;
 
+  if (getSign === "default") {
+    console.log("default selected");
+  }
+
+  determineSign.innerHTML = `Your sign is: ${getSign}`;
   displayHoroscope.innerHTML = newHoroscope;
 
   if (strangeAlbert.style.display === "none") {
