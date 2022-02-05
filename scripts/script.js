@@ -41,11 +41,8 @@ function spinMyWebOfFate() {
   const randomEnd = Math.floor(Math.random() * horoscopeEnd.length);
   const strangeAlbert = document.querySelector("#strangeAlbert");
   const getSign = document.querySelector("#signs").value;
-  const createIcon = document.createElement("img");
-  createIcon.innerHTML = `<img src="./assets/${getSign}Icon.png" id="${getSign}Icon" alt="${getSign} symbol" width="25" height="25">`;
-  console.log(createIcon);
 
-  const newHoroscope = `${getSign.toUpperCase()}: ${createIcon} ${
+  const newHoroscope = `${getSign.toUpperCase()}: ${
     horoscopeSubject[randomSub]
   } ${horoscopeBeginning[randomBeg]} ${horoscopeMiddle[randomMid]} ${
     horoscopeEnd[randomEnd]
@@ -125,3 +122,31 @@ function spinMyWebOfFate() {
 //   default:
 //     console.log(`Sorry, the crystals state that ${getSign} is not a sign.`);
 // }
+
+// const createIcon = document.createElement("img");
+// // createIcon.innerHTML = `<img src="./assets/${getSign}Icon.png" id="${getSign}Icon" alt="${getSign} symbol" width="25" height="25">`;
+// console.log(createIcon);
+// createIcon.src = `./assets/${getSign}Icon.png`;
+// createIcon.alt = `${getSign} symbol`;
+// createIcon.style.width = "25px";
+// createIcon.style.height = "25px";
+
+// document.body.appendChild(createIcon);
+// console.log(createIcon);
+
+// // const img = document.createElement("img");
+// // img.src = "./assets/VirgoIcon.png";
+// // document.body.appendChild(img);
+
+// "Aries": 3/21-4/19
+// "Taurus": 4/20-5/20
+// "Gemini": 5/21-6/21
+// "Cancer": 6/22-7/22
+// "Leo": 7/23-8/22
+// "Virgo": 8/23-9/22
+// "Libra": 9/23-10/22
+// "Scorpio": 10/23-11/22
+// "Sagittarius": 11/23-12/21
+// "Capricorn": 12/22-1/19
+// "Aquarius": 1/20-2/18
+// "Pisces": 2/19-3/20

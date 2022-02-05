@@ -16,6 +16,18 @@
 <body>
   <header class="w3-container w3-blue w3-center" style="padding:24px 12px">
       <h1 class="w3-margin w3-jumbo">Your Horoscope</h1>
+      <img src="./assets/AriesIcon.png" id="AriesIcon" alt="Aries symbol" width="25" height="25">
+      <img src="./assets/TaurusIcon.png" id="TaurusIcon" alt="Taurus symbol" width="25" height="25">
+      <img src="./assets/GeminiIcon.png" id="GeminiIcon" alt="Gemini symbol" width="25" height="25">
+      <img src="./assets/CancerIcon.png" id="CancerIcon" alt="Cancer symbol" width="25" height="25">
+      <img src="./assets/LeoIcon.png" id="LeoIcon" alt="Leo symbol" width="25" height="25">
+      <img src="./assets/VirgoIcon.png" id="VirgoIcon" alt="Virgo symbol" width="25" height="25">
+      <img src="./assets/LibraIcon.png" id="LibraIcon" alt="Libra symbol" width="25" height="25">
+      <img src="./assets/ScorpioIcon.png" id="ScorpioIcon" alt="Scorpio symbol" width="25" height="25">
+      <img src="./assets/SagittariusIcon.png" id="SagittariusIcon" alt="Sagittarius symbol" width="25" height="25">
+      <img src="./assets/CapricornIcon.png" id="CapricornIcon" alt="Capricorn symbol" width="25" height="25">
+      <img src="./assets/AquariusIcon.png" id="AquariusIcon" alt="Aquarius symbol" width="25" height="25">
+      <img src="./assets/PiscesIcon.png" id="PiscesIcon" alt="Pisces symbol" width="25" height="25"><br><br>
       <i>Your Guaranteed* Prediction** for Today***™</i>
   </header>
 
@@ -44,19 +56,6 @@
         <!-- <p>Your sign is: </p> -->
         <button id="generate-horoscope" onclick="spinMyWebOfFate()">Tell Me My Fortune</button>
 
-        <img src="./assets/AriesIcon.png" id="AriesIcon" alt="Aries symbol" width="25" height="25">
-        <img src="./assets/TaurusIcon.png" id="TaurusIcon" alt="Taurus symbol" width="25" height="25">
-        <img src="./assets/GeminiIcon.png" id="GeminiIcon" alt="Gemini symbol" width="25" height="25">
-        <img src="./assets/CancerIcon.png" id="CancerIcon" alt="Cancer symbol" width="25" height="25">
-        <img src="./assets/LeoIcon.png" id="LeoIcon" alt="Leo symbol" width="25" height="25">
-        <img src="./assets/VirgoIcon.png" id="VirgoIcon" alt="Virgo symbol" width="25" height="25">
-        <img src="./assets/LibraIcon.png" id="LibraIcon" alt="Libra symbol" width="25" height="25">
-        <img src="./assets/ScorpioIcon.png" id="ScorpioIcon" alt="Scorpio symbol" width="25" height="25">
-        <img src="./assets/SagittariusIcon.png" id="SagittariusIcon" alt="Sagittarius symbol" width="25" height="25">
-        <img src="./assets/CapricornIcon.png" id="CapricornIcon" alt="Capricorn symbol" width="25" height="25">
-        <img src="./assets/AquariusIcon.png" id="AquariusIcon" alt="Aquarius symbol" width="25" height="25">
-        <img src="./assets/PiscesIcon.png" id="PiscesIcon" alt="Pisces symbol" width="25" height="25">
-
       </div>
     </div>
   </div>
@@ -65,6 +64,7 @@
     <div class="w3-content">
       <div class="w3-twothird">
         <h1>The stars say...</h1>
+        <div id="iconEl"></div>
         <!-- <p class="w3-padding-16" id="horoscope-container" style="padding: 10px; border: 2px solid black;">(Your fortune here)</p> -->
         <i><textarea class="w3-padding-16" id="horoscope-container" style="padding: 10px; border: 2px solid black;" rows="6" cols="100" readonly>Your fortune shall here appear.</textarea></i>
         <p id="strangeAlbert" class="w3-text-grey" style="font-size: 12px;" display="block"><a href="https://www.youtube.com/watch?v=XjlD6yYq5as" target="_blank">♪♫ That's your horoscope for today ♫♪</a></p>
