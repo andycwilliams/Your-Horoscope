@@ -41,8 +41,11 @@ function spinMyWebOfFate() {
   const randomEnd = Math.floor(Math.random() * horoscopeEnd.length);
   const strangeAlbert = document.querySelector("#strangeAlbert");
   const getSign = document.querySelector("#signs").value;
+  const createIcon = document.createElement("img");
+  createIcon.innerHTML = `<img src="./assets/${getSign}Icon.png" id="${getSign}Icon" alt="${getSign} symbol" width="25" height="25">`;
+  console.log(createIcon);
 
-  const newHoroscope = `${getSign.toUpperCase()}: ${
+  const newHoroscope = `${getSign.toUpperCase()}: ${createIcon} ${
     horoscopeSubject[randomSub]
   } ${horoscopeBeginning[randomBeg]} ${horoscopeMiddle[randomMid]} ${
     horoscopeEnd[randomEnd]
@@ -57,6 +60,18 @@ function spinMyWebOfFate() {
 
 // ----------------------------------------------------------------
 
+/* <div id="first" style="height:25px; width:25px; display:none;">
+  <img src="" />
+</div>; */
+
+// const myImage = function myImage(img) {
+//   const sheldon = document.getElementById("sheldon");
+//   sheldon.innerHTML =
+//     '<img src="./assets/' +
+//     img +
+//     '" id="{}Icon" alt="{} symbol" width="25" height="25"/>';
+// };
+
 // const colors = ["blue", "yellow", "orange", "red"];
 // const randIndex = Math.floor(Math.random() * colors.length);
 // console.log(colors[randIndex]);
@@ -68,4 +83,45 @@ function spinMyWebOfFate() {
 //   );
 //   demo.appendChild(txt);
 //   document.body.appendChild(demo);
+// }
+
+// switch (getSign) {
+//   case "Aries":
+//     console.log(getSign);
+//     break;
+//   case "Taurus":
+//     console.log(getSign);
+//     break;
+//   case "Gemini":
+//     console.log(getSign);
+//     break;
+//   case "Cancer":
+//     console.log(getSign);
+//     break;
+//   case "Leo":
+//     console.log(getSign);
+//     break;
+//   case "Virgo":
+//     console.log(getSign);
+//     break;
+//   case "Libra":
+//     console.log(getSign);
+//     break;
+//   case "Scorpio":
+//     console.log(getSign);
+//     break;
+//   case "Sagittarius":
+//     console.log(getSign);
+//     break;
+//   case "Capricorn":
+//     console.log(getSign);
+//     break;
+//   case "Aquarius":
+//     console.log(getSign);
+//     break;
+//   case "Pisces":
+//     console.log(getSign);
+//     break;
+//   default:
+//     console.log(`Sorry, the crystals state that ${getSign} is not a sign.`);
 // }
