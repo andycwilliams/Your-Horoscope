@@ -38,16 +38,15 @@ const horoscopeEnd = [
 function handleClick() {
   if (dateRange != 0) {
     const vals = dateRange.value.split("-");
-    const year = vals[0];
     const month = vals[1];
     const day = vals[2];
-    console.log(day, month, year);
 
     let userSign = "";
     if (month == "01") {
       if (day < 20) userSign = "Capricorn";
-      else userSign = "aquarius";
+      else userSign = "Aquarius";
       console.log(userSign);
+      document.querySelector("#signs").value === userSign;
     } else if (month == "02") {
       if (day < 19) userSign = "Aquarius";
       else userSign = "pisces";
@@ -92,8 +91,9 @@ function handleClick() {
       if (day < 22) userSign = "Sagittarius";
       else userSign = "capricorn";
       console.log(userSign);
+    } else {
+      spinMyWebOfFate(userSign);
     }
-    spinMyWebOfFate(userSign);
   }
 }
 
@@ -149,47 +149,6 @@ function spinMyWebOfFate(userSign) {
 //   );
 //   demo.appendChild(txt);
 //   document.body.appendChild(demo);
-// }
-
-// switch (getSign) {
-//   case "Aries":
-//     console.log(getSign);
-//     break;
-//   case "Taurus":
-//     console.log(getSign);
-//     break;
-//   case "Gemini":
-//     console.log(getSign);
-//     break;
-//   case "Cancer":
-//     console.log(getSign);
-//     break;
-//   case "Leo":
-//     console.log(getSign);
-//     break;
-//   case "Virgo":
-//     console.log(getSign);
-//     break;
-//   case "Libra":
-//     console.log(getSign);
-//     break;
-//   case "Scorpio":
-//     console.log(getSign);
-//     break;
-//   case "Sagittarius":
-//     console.log(getSign);
-//     break;
-//   case "Capricorn":
-//     console.log(getSign);
-//     break;
-//   case "Aquarius":
-//     console.log(getSign);
-//     break;
-//   case "Pisces":
-//     console.log(getSign);
-//     break;
-//   default:
-//     console.log(`Sorry, the crystals state that ${getSign} is not a sign.`);
 // }
 
 // const createIcon = document.createElement("img");
