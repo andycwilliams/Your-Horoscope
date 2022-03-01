@@ -8,7 +8,7 @@ Now you may find it inconceivable or at the very least a bit unlikely that the r
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[Deployed Link](https://andywilliams-portfolio.herokuapp.com/)
+[Deployed Link](https://your-horoscope-acw.herokuapp.com/)
 
 <!-- ![Screenshot of deployed application, homepage of site with timer and random tip](/screenshot.png?raw=true "Screenshot of deployed application") -->
 

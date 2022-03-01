@@ -1,5 +1,7 @@
 const displayHoroscope = document.querySelector("#horoscope-container");
 const generateButton = document.querySelector("#generate-horoscope");
+const dateRange = document.getElementById("dateRange");
+// generateButton.addEventListener("click", handleClick());
 
 const horoscopeSubject = [
   "Your third favorite cousin",
@@ -11,7 +13,6 @@ const horoscopeSubject = [
   "A mysterious stranger",
   "Richard Nixon III",
 ];
-
 const horoscopeBeginning = [
   "will approach you with an offer: make a vision board and",
   "will wake up",
@@ -34,7 +35,69 @@ const horoscopeEnd = [
   "and then challenge you to an arm wrestling contest. You will lose dozens of times in a row. Then, finally, one time you will feel like it's going to be different. You feel different. Stronger, more capable. Your opponent seems fatigued. Are they giving up? You press the advantage. After half an hour it seems like they're going to yield. Sweat erupts from their every pore. You're also wearing out but gosh darn are you DETERMINED. Then suddenly they SLAM your arm to the other side, spraining it in three places. Everyone is laughing. Your parents are laughing the hardest.",
 ];
 
-function spinMyWebOfFate() {
+function handleClick() {
+  if (dateRange != 0) {
+    const vals = dateRange.value.split("-");
+    const year = vals[0];
+    const month = vals[1];
+    const day = vals[2];
+    console.log(day, month, year);
+
+    let userSign = "";
+    if (month == "01") {
+      if (day < 20) userSign = "Capricorn";
+      else userSign = "aquarius";
+      console.log(userSign);
+    } else if (month == "02") {
+      if (day < 19) userSign = "Aquarius";
+      else userSign = "pisces";
+      console.log(userSign);
+    } else if (month == "03") {
+      if (day < 21) userSign = "Pisces";
+      else userSign = "aries";
+      console.log(userSign);
+    } else if (month == "04") {
+      if (day < 20) userSign = "Aries";
+      else userSign = "taurus";
+      console.log(userSign);
+    } else if (month == "05") {
+      if (day < 21) userSign = "Taurus";
+      else userSign = "gemini";
+      console.log(userSign);
+    } else if (month == "06") {
+      if (day < 21) userSign = "Gemini";
+      else userSign = "cancer";
+      console.log(userSign);
+    } else if (month == "07") {
+      if (day < 23) userSign = "Cancer";
+      else userSign = "leo";
+      console.log(userSign);
+    } else if (month == "08") {
+      if (day < 23) userSign = "Leo";
+      else userSign = "virgo";
+      console.log(userSign);
+    } else if (month == "09") {
+      if (day < 23) userSign = "Virgo";
+      else userSign = "libra";
+      console.log(userSign);
+    } else if (month == "10") {
+      if (day < 23) userSign = "Libra";
+      else userSign = "scorpio";
+      console.log(userSign);
+    } else if (month == "11") {
+      if (day < 22) userSign = "scorpio";
+      else userSign = "sagittarius";
+      console.log(userSign);
+    } else if (month == "12") {
+      if (day < 22) userSign = "Sagittarius";
+      else userSign = "capricorn";
+      console.log(userSign);
+    }
+    spinMyWebOfFate(userSign);
+  }
+}
+
+function spinMyWebOfFate(userSign) {
   const randomSub = Math.floor(Math.random() * horoscopeSubject.length);
   const randomBeg = Math.floor(Math.random() * horoscopeBeginning.length);
   const randomMid = Math.floor(Math.random() * horoscopeMiddle.length);
