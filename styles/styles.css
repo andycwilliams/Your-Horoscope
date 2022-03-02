@@ -1,17 +1,35 @@
 /* Courtesy of https://www.w3schools.com/w3css/w3css_templates.asp */
 
-body,h1,h2,h3,h4,h5,h6 {
-    font-family: "Lato", sans-serif
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
 }
 
-.w3-bar,h1,button {
-    font-family: "Montserrat", sans-serif
+.w3-bar,
+h1,
+button {
+  font-family: "Montserrat", sans-serif;
 }
 
-.fa-anchor,.fa-coffee {
-    font-size:200px
+.fa-anchor,
+.fa-coffee {
+  font-size: 200px;
 }
 
 #strangeAlbert {
-    display: none
+  display: none;
+}
+
+#generate-horoscope {
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 6px 12px;
+  margin: 5px;
+  font-size: 16px;
 }

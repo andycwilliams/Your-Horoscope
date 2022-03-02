@@ -3,6 +3,10 @@ const generateButton = document.querySelector("#generate-horoscope");
 const dateRange = document.getElementById("dateRange");
 // generateButton.addEventListener("click", handleClick());
 
+const horoscopeStarter = [
+  "This is so unlike you. I mean, wow, really?",
+  "You're going to wake up to a bunch of stuff and then go back to sleep.",
+];
 const horoscopeSubject = [
   "Your third favorite cousin",
   "Some guy",
@@ -34,9 +38,11 @@ const horoscopeEnd = [
   "then recount in excruciating detail your most embarrassing memory from 3rd grade.",
   "and then challenge you to an arm wrestling contest. You will lose dozens of times in a row. Then, finally, one time you will feel like it's going to be different. You feel different. Stronger, more capable. Your opponent seems fatigued. Are they giving up? You press the advantage. After half an hour it seems like they're going to yield. Sweat erupts from their every pore. You're also wearing out but gosh darn are you DETERMINED. Then suddenly they SLAM your arm to the other side, spraining it in three places. Everyone is laughing. Your parents are laughing the hardest.",
 ];
+const horoscopeStinger = ["Ba'hee Priss Dimmie!"];
 
 function handleClick() {
   if (dateRange != 0) {
+    const determineSign = document.querySelector("#determineSign");
     const vals = dateRange.value.split("-");
     const month = vals[1];
     const day = vals[2];
@@ -46,51 +52,76 @@ function handleClick() {
       if (day < 20) userSign = "Capricorn";
       else userSign = "Aquarius";
       console.log(userSign);
-      document.querySelector("#signs").value === userSign;
+      // document.querySelector("#signs").value === userSign;
+      // determineSign.innerHTML = `Your sign is: ${userSign}`;
+      document.querySelector("#signs").value = userSign;
+      spinMyWebOfFate(userSign);
     } else if (month == "02") {
       if (day < 19) userSign = "Aquarius";
-      else userSign = "pisces";
+      else userSign = "Pisces";
       console.log(userSign);
+      document.querySelector("#signs").value = userSign;
+      spinMyWebOfFate(userSign);
     } else if (month == "03") {
       if (day < 21) userSign = "Pisces";
-      else userSign = "aries";
+      else userSign = "Aries";
       console.log(userSign);
+      document.querySelector("#signs").value = userSign;
+      spinMyWebOfFate(userSign);
     } else if (month == "04") {
       if (day < 20) userSign = "Aries";
-      else userSign = "taurus";
+      else userSign = "Taurus";
       console.log(userSign);
+      document.querySelector("#signs").value = userSign;
+      spinMyWebOfFate(userSign);
     } else if (month == "05") {
       if (day < 21) userSign = "Taurus";
-      else userSign = "gemini";
+      else userSign = "Gemini";
       console.log(userSign);
+      document.querySelector("#signs").value = userSign;
+      spinMyWebOfFate(userSign);
     } else if (month == "06") {
       if (day < 21) userSign = "Gemini";
-      else userSign = "cancer";
+      else userSign = "Cancer";
       console.log(userSign);
+      document.querySelector("#signs").value = userSign;
+      spinMyWebOfFate(userSign);
     } else if (month == "07") {
       if (day < 23) userSign = "Cancer";
-      else userSign = "leo";
+      else userSign = "Leo";
       console.log(userSign);
+      document.querySelector("#signs").value = userSign;
+      spinMyWebOfFate(userSign);
     } else if (month == "08") {
       if (day < 23) userSign = "Leo";
-      else userSign = "virgo";
+      else userSign = "Virgo";
       console.log(userSign);
+      document.querySelector("#signs").value = userSign;
+      spinMyWebOfFate(userSign);
     } else if (month == "09") {
       if (day < 23) userSign = "Virgo";
-      else userSign = "libra";
+      else userSign = "Libra";
       console.log(userSign);
+      document.querySelector("#signs").value = userSign;
+      spinMyWebOfFate(userSign);
     } else if (month == "10") {
       if (day < 23) userSign = "Libra";
-      else userSign = "scorpio";
+      else userSign = "Scorpio";
       console.log(userSign);
+      document.querySelector("#signs").value = userSign;
+      spinMyWebOfFate(userSign);
     } else if (month == "11") {
-      if (day < 22) userSign = "scorpio";
-      else userSign = "sagittarius";
+      if (day < 22) userSign = "Scorpio";
+      else userSign = "Sagittarius";
       console.log(userSign);
+      document.querySelector("#signs").value = userSign;
+      spinMyWebOfFate(userSign);
     } else if (month == "12") {
       if (day < 22) userSign = "Sagittarius";
-      else userSign = "capricorn";
+      else userSign = "Capricorn";
       console.log(userSign);
+      document.querySelector("#signs").value = userSign;
+      spinMyWebOfFate(userSign);
     } else {
       spinMyWebOfFate(userSign);
     }
@@ -104,7 +135,7 @@ function spinMyWebOfFate(userSign) {
   const randomEnd = Math.floor(Math.random() * horoscopeEnd.length);
   const strangeAlbert = document.querySelector("#strangeAlbert");
   const getSign = document.querySelector("#signs").value;
-  const determineSign = document.querySelector("#determineSign");
+  // const determineSign = document.querySelector("#determineSign");
 
   const newHoroscope = `${getSign.toUpperCase()}: ${
     horoscopeSubject[randomSub]
@@ -113,68 +144,12 @@ function spinMyWebOfFate(userSign) {
   }`;
 
   if (getSign === "default") {
-    console.log("default selected");
-  }
+    alert("You need to select your sign!");
+  } else {
+    displayHoroscope.innerHTML = newHoroscope;
 
-  determineSign.innerHTML = `Your sign is: ${getSign}`;
-  displayHoroscope.innerHTML = newHoroscope;
-
-  if (strangeAlbert.style.display === "none") {
-    strangeAlbert.style.display = "block";
+    if (strangeAlbert.style.display === "none") {
+      strangeAlbert.style.display = "block";
+    }
   }
 }
-
-// ----------------------------------------------------------------
-
-/* <div id="first" style="height:25px; width:25px; display:none;">
-  <img src="" />
-</div>; */
-
-// const myImage = function myImage(img) {
-//   const sheldon = document.getElementById("sheldon");
-//   sheldon.innerHTML =
-//     '<img src="./assets/' +
-//     img +
-//     '" id="{}Icon" alt="{} symbol" width="25" height="25"/>';
-// };
-
-// const colors = ["blue", "yellow", "orange", "red"];
-// const randIndex = Math.floor(Math.random() * colors.length);
-// console.log(colors[randIndex]);
-
-// function myFunction() {
-//   var demo = document.createElement("P");
-//   var txt = document.createTextNode(
-//     "This is a the example of JavaScript Append method so, it will  print its created child node."
-//   );
-//   demo.appendChild(txt);
-//   document.body.appendChild(demo);
-// }
-
-// const createIcon = document.createElement("img");
-// // createIcon.innerHTML = `<img src="./assets/${getSign}Icon.png" id="${getSign}Icon" alt="${getSign} symbol" width="25" height="25">`;
-// console.log(createIcon);
-// createIcon.src = `./assets/${getSign}Icon.png`;
-// createIcon.alt = `${getSign} symbol`;
-// createIcon.style.width = "25px";
-// createIcon.style.height = "25px";
-
-// document.body.appendChild(createIcon);
-// console.log(createIcon);
-
-// // const img = document.createElement("img");
-// // img.src = "./assets/VirgoIcon.png";
-// // document.body.appendChild(img);
-
-// "Aries": 3/21-4/19
-// "Taurus": 4/20-5/20
-// "Gemini": 5/21-6/21
-// "Cancer": 6/22-7/22
-// "Leo": 7/23-8/22
-// "Virgo": 8/23-9/22
-// "Libra": 9/23-10/22
-// "Scorpio": 10/23-11/22
-// "Sagittarius": 11/23-12/21
-// "Capricorn": 12/22-1/19
-// "Aquarius": 1/20-2/18
-// "Pisces": 2/19-3/20

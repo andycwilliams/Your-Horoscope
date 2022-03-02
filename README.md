@@ -2,9 +2,9 @@
 
 Fully accurate Horoscope generator with guaranteed results.
 
-TODO: Make mobile-friendly. Consider adding dark mode, logo, other photos, animation, sound effects, etc.
+CONSIDER: Make mobile-friendly, swap input options out (choosing date removes select option dropdown list?), dark mode, logo, other photos, animation, etc.
 
-Now you may find it inconceivable or at the very least a bit unlikely that the relative position of the planets and the stars could have a special deep significance or meaning that exclusively applies to only you but let me give you my assurance that these forecasts and predictions are all based on solid, scientific, documented evidence, so you would have to be some kind of moron not to realize that every single one of them is absolutely true.
+DISCLAIMER: Now you may find it inconceivable or at the very least a bit unlikely that the relative position of the planets and the stars could have a special deep significance or meaning that exclusively applies to only you but let me give you my assurance that these forecasts and predictions are all based on solid, scientific, documented evidence, so you would have to be some kind of moron not to realize that every single one of them is absolutely true. - Albert, Phase Sorcerer and Ambassador of the Stars
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -39,6 +39,6 @@ Guidelines
 
 Andy Williams
 
-- [Email](mailto:awilliamscoding@gmail.com)
+- [Email](mailto:andywilliamscoding@gmail.com)
 - [GitHub](https://github.com/andycwilliams)
 - [LinkedIn](https://www.linkedin.com/in/andrewcharleswilliams/)
