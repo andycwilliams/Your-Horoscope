@@ -1,11 +1,11 @@
 const displayHoroscope = document.querySelector("#horoscope-container");
 const generateButton = document.querySelector("#generate-horoscope");
 const dateRange = document.getElementById("dateRange");
-// generateButton.addEventListener("click", handleClick());
 
 const horoscopeStarter = [
-  "This is so unlike you. I mean, wow, really?",
+  "This is so unlike you. I mean, really.",
   "You're going to wake up to a bunch of stuff and then go back to sleep.",
+  "Bro you aren't going to believe this...",
 ];
 const horoscopeSubject = [
   "Your third favorite cousin",
@@ -16,6 +16,7 @@ const horoscopeSubject = [
   "You",
   "A mysterious stranger",
   "Richard Nixon III",
+  "HE",
 ];
 const horoscopeBeginning = [
   "will approach you with an offer: make a vision board and",
@@ -52,8 +53,6 @@ function handleClick() {
       if (day < 20) userSign = "Capricorn";
       else userSign = "Aquarius";
       console.log(userSign);
-      // document.querySelector("#signs").value === userSign;
-      // determineSign.innerHTML = `Your sign is: ${userSign}`;
       document.querySelector("#signs").value = userSign;
       spinMyWebOfFate(userSign);
     } else if (month == "02") {
@@ -153,3 +152,12 @@ function spinMyWebOfFate(userSign) {
     }
   }
 }
+
+// Randomize whether Starter and Stinger are even added.
+
+// [Money and friendship rarely mix], Virgo. Keep this in mind today if [a friend hits you up for a loan]. [You'd be better off [helping her strategize ways]] to [earn more money]. Much as you like to help the underdog, [a temporary approach often does more harm than good]. [A quick loan] [won't help your friend's] [fundamental problem of] [compulsive spending]. [Offering to pay for] [counseling] would be a [gift of enduring value].
+// [You can expect to] [run a lot of errands today], Gemini, [even though you would probably prefer to stay at home]. [You have obligations to] [fulfill for friends and family], and [you can't bear to let them down]. [Try to get everything done as quickly as possible so that] you'll still have [the afternoon free for yourself].
+// [Today you could receive] [word of a promotion or exciting new challenge] [at work]. Although this is something you've wanted for a long time, [you may hesitate to accept immediately]. [Could it be because] [your self-confidence is rather low right now,] Leo? Don't let that stop you! This feeling is only temporary, while [the opportunity could develop into] [something lasting]. Don't lose your chance!
+// This is unlike you, Libra, but today you're a lean, mean cleaning machine. You get it in your head that this is the day for putting your house in order, and you set about single-handedly doing it. That's way too much cleaning and organizing for one person to do. Why not enlist some help? Bribe your partner or kids, play some loud music, and all of you will finish the tasks in no time.
+// You can't help but feel a bit frustrated today, Scorpio. There are places to go, people to see, and you can't seem to get out of the house. Your responsibilities are at home now, and the situation won't change for a while. You can, however, plan some mini-vacations without too much effort. Treat yourself one evening to fantastic take-out food and a sappy old movie. That might be just the thing to lift your spirits.
+// You have energy to burn, Cancer, and you intend to use it. Ask friends to join you in the park. Or set up a round-robin tennis match for the afternoon. Enjoy your day outdoors, but take care not to push too hard. If you strain muscles today, it could be weeks before you're fully healed. If you pace yourself and take plenty of water breaks, then you'll enjoy the day with no repercussions.

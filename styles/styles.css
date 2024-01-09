@@ -21,15 +21,31 @@ button {
   font-size: 200px;
 }
 
-#strangeAlbert {
-  display: none;
+.selectors {
+  border-radius: 5px;
+  cursor: pointer;
+  /* font-family: inherit; */
+  /* padding: 6px 12px; */
+  /* margin: 5px; */
+  /* font-size: 16px; */
 }
 
-#generate-horoscope {
-  border-radius: 3px;
+#horoscope-container {
+  /* padding: 20px; */
+  border: 2px solid black;
+  width: 100%;
+  max-width: 600px;
+}
+
+#generate-horoscope-button {
+  border-radius: 5px;
   cursor: pointer;
   font-family: inherit;
   padding: 6px 12px;
   margin: 5px;
   font-size: 16px;
+}
+
+#peculiar-albert {
+  display: none;
 }

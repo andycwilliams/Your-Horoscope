@@ -114,11 +114,11 @@
 
     <div class="w3-row-padding w3-padding-16 w3-container">
       <div class="w3-content">
-        <div class="w3-twothird">
+        <div>
           <h1>Choose your sign</h1>
           <h5 class="w3-padding-8">
             <label>My sign:</label>
-            <select id="signs">
+            <select class="selectors">
               <option value="default" selected disabled hidden>
                 Choose here
               </option>
@@ -137,11 +137,12 @@
             </select>
           </h5>
           <p class="w3-text-grey">
-            Not sure what your sign is? Select your birthday instead:
-            <input id="dateRange" type="date" />
+            Does the celestial plane obscure knowledge of your sign?? Select
+            your birthday instead:
+            <input class="selectors" type="date" />
           </p>
-          <button id="generate-horoscope" onclick="handleClick()">
-            O Spirits, Tell Me My Fortune
+          <button id="generate-horoscope-button" onclick="handleClick()">
+            <i> O Spirits, Tell Me My Fortune!</i>
           </button>
           <div id="determineSign"></div>
         </div>
@@ -150,24 +151,24 @@
 
     <div class="w3-row-padding w3-light-grey w3-padding-16 w3-container">
       <div class="w3-content">
-        <div class="w3-twothird">
+        <div>
           <h1>The stars say...</h1>
           <i>
             <textarea
-              class="w3-padding-16"
+              class=""
               id="horoscope-container"
-              style="padding: 10px; border: 2px solid black"
               rows="6"
               cols="100"
               readonly
             >
-Your fortune shall here appear.</textarea
+In here, your fortune shall appear...
+</textarea
             >
           </i>
           <p
-            id="strangeAlbert"
+            id="peculiar-albert"
             class="w3-text-grey"
-            style="font-size: 12px"
+            style="font-size: 20px"
             display="block"
           >
             <a
@@ -184,40 +185,19 @@ Your fortune shall here appear.</textarea
       <p>Horoscope © 2,000 BCE</p>
     </div>
 
-    <footer class="w3-container w3-padding-16 w3-center w3-opacity">
+    <footer class="w3-container w3-padding-12 w3-center w3-opacity">
       <div class="w3-xlarge w3-padding-12">
-        <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i> -->
-        <!-- <i class="fa fa-instagram w3-hover-opacity"></i> -->
-        <!-- <i class="fa fa-twitter w3-hover-opacity" src=""></i> -->
-        <a
-          class="fa fa-github w3-hover-opacity"
-          style="text-decoration: none"
-          href="https://github.com/andycwilliams"
-          target="_blank"
-        ></a>
-        <a
-          class="fa fa-linkedin w3-hover-opacity"
-          style="text-decoration: none"
-          href="https://www.linkedin.com/in/andrewcharleswilliams/"
-          target="_blank"
-        ></a>
-        <a
-          class="fa fa-stack-overflow w3-hover-opacity"
-          style="text-decoration: none"
-          href="https://stackoverflow.com/users/15759272/andy"
-          target="_blank"
-        ></a>
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity" src=""></i>
       </div>
       <p>
-        Powered by
+        Powered by the COSMOS (and also
         <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
           >w3.css</a
-        >
+        >)
       </p>
     </footer>
   </body>
   <script src="./scripts/script.js"></script>
 </html>
-
-<!-- <p class="w3-text-grey" style="font-size: 12px;"><a href="https://www.youtube.com/watch?v=XjlD6yYq5as" target="_blank">♪♫ That's your horoscope for today ♫♪</a></p> -->
-<!-- <p class="w3-padding-16" id="horoscope-container" style="padding: 10px; border: 2px solid black;">(Your fortune here)</p> -->
