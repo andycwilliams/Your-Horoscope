@@ -23,102 +23,34 @@
   </head>
 
   <body>
-    <header class="w3-container w3-blue w3-center" style="padding: 20px 12px">
+    <header class="w3-container w3-blue w3-center">
       <h1 class="w3-margin w3-jumbo">Your Horoscope</h1>
-      <img
-        src="./assets/AriesIcon.png"
-        id="AriesIcon"
-        alt="Aries symbol"
-        width="25"
-        height="25"
-      />
-      <img
-        src="./assets/TaurusIcon.png"
-        id="TaurusIcon"
-        alt="Taurus symbol"
-        width="25"
-        height="25"
-      />
-      <img
-        src="./assets/GeminiIcon.png"
-        id="GeminiIcon"
-        alt="Gemini symbol"
-        width="25"
-        height="25"
-      />
-      <img
-        src="./assets/CancerIcon.png"
-        id="CancerIcon"
-        alt="Cancer symbol"
-        width="25"
-        height="25"
-      />
-      <img
-        src="./assets/LeoIcon.png"
-        id="LeoIcon"
-        alt="Leo symbol"
-        width="25"
-        height="25"
-      />
-      <img
-        src="./assets/VirgoIcon.png"
-        id="VirgoIcon"
-        alt="Virgo symbol"
-        width="25"
-        height="25"
-      />
-      <img
-        src="./assets/LibraIcon.png"
-        id="LibraIcon"
-        alt="Libra symbol"
-        width="25"
-        height="25"
-      />
-      <img
-        src="./assets/ScorpioIcon.png"
-        id="ScorpioIcon"
-        alt="Scorpio symbol"
-        width="25"
-        height="25"
-      />
-      <img
-        src="./assets/SagittariusIcon.png"
-        id="SagittariusIcon"
-        alt="Sagittarius symbol"
-        width="25"
-        height="25"
-      />
-      <img
-        src="./assets/CapricornIcon.png"
-        id="CapricornIcon"
-        alt="Capricorn symbol"
-        width="25"
-        height="25"
-      />
-      <img
-        src="./assets/AquariusIcon.png"
-        id="AquariusIcon"
-        alt="Aquarius symbol"
-        width="25"
-        height="25"
-      />
-      <img
-        src="./assets/PiscesIcon.png"
-        id="PiscesIcon"
-        alt="Pisces symbol"
-        width="25"
-        height="25"
-      /><br /><br />
-      <i>Your Guaranteed* Prediction** for Today***™</i>
+      <div class="zodiac-icons">
+        <img src="./assets/AriesIcon.png" alt="Aries symbol" />
+        <img src="./assets/TaurusIcon.png" alt="Taurus symbol" />
+        <img src="./assets/GeminiIcon.png" alt="Gemini symbol" />
+        <img src="./assets/CancerIcon.png" alt="Cancer symbol" />
+        <img src="./assets/LeoIcon.png" alt="Leo symbol" />
+        <img src="./assets/VirgoIcon.png" alt="Virgo symbol" />
+        <img src="./assets/LibraIcon.png" alt="Libra symbol" />
+        <img src="./assets/ScorpioIcon.png" alt="Scorpio symbol" />
+        <img src="./assets/SagittariusIcon.png" alt="Sagittarius symbol" />
+        <img src="./assets/CapricornIcon.png" alt="Capricorn symbol" />
+        <img src="./assets/AquariusIcon.png" alt="Aquarius symbol" />
+        <img src="./assets/PiscesIcon.png" alt="Pisces symbol" />
+      </div>
+      <div class="prediction">
+        <i>Your Guaranteed* Prediction** for Today***™</i>
+      </div>
     </header>
 
     <div class="w3-row-padding w3-padding-16 w3-container">
       <div class="w3-content">
         <div>
-          <h1>Choose your sign</h1>
-          <h5 class="w3-padding-8">
-            <label>My sign:</label>
-            <select class="selectors">
+          <h2>Choose your sign</h2>
+          <div class="w3-padding-8">
+            <label for="signSelector">My sign:</label>
+            <select id="signSelector" class="selectors">
               <option value="default" selected disabled hidden>
                 Choose here
               </option>
@@ -135,14 +67,18 @@
               <option value="Aquarius">Aquarius</option>
               <option value="Pisces">Pisces</option>
             </select>
-          </h5>
+          </div>
           <p class="w3-text-grey">
             Does the celestial plane obscure knowledge of your sign?? Select
             your birthday instead:
-            <input class="selectors" type="date" />
+            <input id="birthdaySelector" class="selectors" type="date" />
           </p>
-          <button id="generate-horoscope-button" onclick="handleClick()">
-            <i> O Spirits, Tell Me My Fortune!</i>
+          <button
+            id="generate-horoscope-button"
+            class="w3-btn w3-orange"
+            onclick="handleClick()"
+          >
+            <i>O Spirits, Tell Me My Fortune!</i>
           </button>
           <div id="determineSign"></div>
         </div>
@@ -152,10 +88,10 @@
     <div class="w3-row-padding w3-light-grey w3-padding-16 w3-container">
       <div class="w3-content">
         <div>
-          <h1>The stars say...</h1>
+          <h2>The stars say...</h2>
           <i>
             <textarea
-              class=""
+              class="w3-input w3-border"
               id="horoscope-container"
               rows="6"
               cols="100"
@@ -165,15 +101,11 @@ In here, your fortune shall appear...
 </textarea
             >
           </i>
-          <p
-            id="peculiar-albert"
-            class="w3-text-grey"
-            style="font-size: 20px"
-            display="block"
-          >
+          <p id="peculiar-albert" class="w3-text-grey" display="block">
             <a
               href="https://www.youtube.com/watch?v=XjlD6yYq5as"
               target="_blank"
+              class="w3-text-blue"
               >♪♫ That's your horoscope for today ♫♪</a
             >
           </p>
@@ -192,10 +124,13 @@ In here, your fortune shall appear...
         <i class="fa fa-twitter w3-hover-opacity" src=""></i>
       </div>
       <p>
-        Powered by the COSMOS (and also
-        <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
-          >w3.css</a
-        >)
+        Powered by the COSMOS
+        <span class="w3-text-grey"
+          >(and also
+          <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+            >w3.css</a
+          >)</span
+        >
       </p>
     </footer>
   </body>

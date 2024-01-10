@@ -10,16 +10,22 @@ h6 {
   font-family: "Lato", sans-serif;
 }
 
-.w3-bar,
-h1,
+/* .w3-bar, */
+/* h1, */
 button {
   font-family: "Montserrat", sans-serif;
 }
 
-.fa-anchor,
+.zodiac-icons img {
+  width: 25px;
+  height: 25px;
+  margin-right: 7px;
+}
+
+/* .fa-anchor,
 .fa-coffee {
   font-size: 200px;
-}
+} */
 
 .selectors {
   border-radius: 5px;
@@ -31,21 +37,26 @@ button {
 }
 
 #horoscope-container {
+  border-radius: 5px;
   /* padding: 20px; */
-  border: 2px solid black;
-  width: 100%;
-  max-width: 600px;
+  /* border: 2px solid black; */
+  /* width: 100%; */
+  /* max-width: 600px; */
 }
 
 #generate-horoscope-button {
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: inherit;
-  padding: 6px 12px;
-  margin: 5px;
-  font-size: 16px;
+  /* border-radius: 5px; */
+  /* cursor: pointer; */
+  /* font-family: inherit; */
+  /* padding: 6px 12px; */
+  /* margin: 5px; */
+  /* font-size: 16px; */
+}
+#generate-horoscope-button:hover {
+  background-color: yellow;
 }
 
 #peculiar-albert {
   display: none;
+  font-size: 20px;
 }
