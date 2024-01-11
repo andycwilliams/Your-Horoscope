@@ -49,7 +49,7 @@
         <div>
           <h2>Choose your sign</h2>
           <div class="w3-padding-8">
-            <label for="signSelector">My sign:</label>
+            <label for="signSelector">My sign:</label> <br />
             <select id="signSelector" class="selectors">
               <option value="default" selected disabled hidden>
                 Choose here
@@ -68,15 +68,18 @@
               <option value="Pisces">Pisces</option>
             </select>
           </div>
+          <br />
           <p class="w3-text-grey">
-            Does the celestial plane obscure knowledge of your sign?? Select
-            your birthday instead:
+            Does the celestial plane obscure knowledge of your sign? Select your
+            birthday instead. We will divine the answer!
+            <br />
             <input id="birthdaySelector" class="selectors" type="date" />
           </p>
+          <br />
           <button
             id="generate-horoscope-button"
             class="w3-btn w3-orange"
-            onclick="handleClick()"
+            onclick="getZodiacSign()"
           >
             <i>O Spirits, Tell Me My Fortune!</i>
           </button>
