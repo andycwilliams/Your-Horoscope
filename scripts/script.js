@@ -1,7 +1,3 @@
-// const displayHoroscope = document.querySelector("#horoscope-container");
-// const generateButton = document.querySelector("#generate-horoscope");
-// const dateRange = document.getElementById("dateRange");
-
 const horoscopeStarter = [
   "This is so unlike you. I mean, really.",
   "You're going to wake up to a bunch of stuff and then go back to sleep.",
@@ -42,5 +38,43 @@ const horoscopeEnd = [
 const horoscopeStinger = ["Ba'hee Priss Dimmie!"];
 
 const getZodiacSign = () => {
-  const displayHoroscope = document.querySelector("#horoscope-container");
+  const userSign = document.querySelector("#sign-selector").value;
+  // const displayHoroscope2 = document.querySelector(
+  //   "#generate-horoscope-button"
+  // ).value;
+ const selectedDate = document.querySelector('#birthday-selector');
+
+
+  console.log(userSign);
+  // console.log(displayHoroscope2);
+
+  spinMyWebOfFate();
+};
+
+const spinMyWebOfFate = () => {
+  const randomSub = Math.floor(Math.random() * horoscopeSubject.length);
+  const randomBeg = Math.floor(Math.random() * horoscopeBeginning.length);
+  const randomMid = Math.floor(Math.random() * horoscopeMiddle.length);
+  const randomEnd = Math.floor(Math.random() * horoscopeEnd.length);
+  const strangeAlbert = document.querySelector("#peculiar-albert");
+  const getSign = document.querySelector("#sign-selector").value;
+
+  const newHoroscope = `${getSign.toUpperCase()}: ${
+    horoscopeSubject[randomSub]
+  } ${horoscopeBeginning[randomBeg]} ${horoscopeMiddle[randomMid]} ${
+    horoscopeEnd[randomEnd]
+  }`;
+
+  if (getSign === "default") {
+    alert("You need to select your sign!");
+  } else {
+    document.querySelector("#horoscope-container").innerHTML = newHoroscope;
+
+    if (strangeAlbert.style.display === "none") {
+      strangeAlbert.style.display = "block";
+      setTimeout(() => {
+        strangeAlbert.style.display === "block";
+      }, 5000);
+    }
+  }
 };

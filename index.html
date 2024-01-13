@@ -24,7 +24,7 @@
 
   <body>
     <header class="w3-container w3-blue w3-center">
-      <h1 class="w3-margin w3-jumbo">Your Horoscope</h1>
+      <div class="w3-margin w3-jumbo">Your Horoscope</div>
       <div class="zodiac-icons">
         <img src="./assets/AriesIcon.png" alt="Aries symbol" />
         <img src="./assets/TaurusIcon.png" alt="Taurus symbol" />
@@ -39,18 +39,18 @@
         <img src="./assets/AquariusIcon.png" alt="Aquarius symbol" />
         <img src="./assets/PiscesIcon.png" alt="Pisces symbol" />
       </div>
-      <div class="prediction">
+      <div>
         <i>Your Guaranteed* Prediction** for Today***™</i>
       </div>
     </header>
 
-    <div class="w3-row-padding w3-padding-16 w3-container">
+    <div class="w3-container w3-row-padding w3-padding-16">
       <div class="w3-content">
         <div>
           <h2>Choose your sign</h2>
           <div class="w3-padding-8">
-            <label for="signSelector">My sign:</label> <br />
-            <select id="signSelector" class="selectors">
+            <label for="sign-selector">Choose sign:</label> <br />
+            <select id="sign-selector" class="w3-select inputs">
               <option value="default" selected disabled hidden>
                 Choose here
               </option>
@@ -67,28 +67,29 @@
               <option value="Aquarius">Aquarius</option>
               <option value="Pisces">Pisces</option>
             </select>
+            <div class="w3-text-grey">Choose it</div>
           </div>
           <br />
           <p class="w3-text-grey">
             Does the celestial plane obscure knowledge of your sign? Select your
-            birthday instead. We will divine the answer!
+            birth date instead, and we shall divine the answer!
             <br />
-            <input id="birthdaySelector" class="selectors" type="date" />
+            <input id="birthday-selector" class="w3-input inputs" type="date" />
           </p>
           <br />
           <button
             id="generate-horoscope-button"
-            class="w3-btn w3-orange"
+            class="w3-btn w3-orange inputs"
             onclick="getZodiacSign()"
           >
             <i>O Spirits, Tell Me My Fortune!</i>
           </button>
-          <div id="determineSign"></div>
+          <div id="determine-sign"></div>
         </div>
       </div>
     </div>
 
-    <div class="w3-row-padding w3-light-grey w3-padding-16 w3-container">
+    <div class="w3-container w3-row-padding w3-light-grey w3-padding-16">
       <div class="w3-content">
         <div>
           <h2>The stars say...</h2>
@@ -104,12 +105,13 @@ In here, your fortune shall appear...
 </textarea
             >
           </i>
-          <p id="peculiar-albert" class="w3-text-grey" display="block">
+          <p class="w3-text-blue" display="block">
             <a
+              id="peculiar-albert"
               href="https://www.youtube.com/watch?v=XjlD6yYq5as"
               target="_blank"
-              class="w3-text-blue"
-              >♪♫ That's your horoscope for today ♫♪</a
+              rel="noreferrer"
+              ><i>♪♫ That's your horoscope for today ♫♪</i></a
             >
           </p>
         </div>

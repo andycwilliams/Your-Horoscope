@@ -27,8 +27,8 @@ button {
   font-size: 200px;
 } */
 
-.selectors {
-  /* border-radius: 5px; */
+.inputs {
+  border-radius: 5px;
   /* cursor: pointer; */
   /* font-family: inherit; */
   /* padding: 6px 12px; */
@@ -58,6 +58,6 @@ button {
 
 #peculiar-albert {
   /* display: none; */
-  font-size: 20px;
+  /* font-size: 20px; */
   text-align: center;
 }
