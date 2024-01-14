@@ -35,7 +35,6 @@ const horoscopeEnd = [
   "then recount in excruciating detail your most embarrassing memory from 3rd grade.",
   "and then challenge you to an arm wrestling contest. You will lose dozens of times in a row. Then, finally, one time you will feel like it's going to be different. You feel different. Stronger, more capable. Your opponent seems fatigued. Are they giving up? You press the advantage. After half an hour it seems like they're going to yield. Sweat erupts from their every pore. You're also wearing out but gosh darn are you DETERMINED. Then suddenly they SLAM your arm to the other side, spraining it in three places. Everyone is laughing. Your parents are laughing the hardest.",
 ];
-const horoscopeStinger = ["Ba'hee Priss Dimmie!"];
 
 // Function to determine where the input came from
 
@@ -44,16 +43,12 @@ const determineInputSource = () => {
   const dateInput = document.querySelector("#birth-date-selector").valueAsDate;
 
   if (dateInput && signInput !== "default") {
-    console.log("Both Sign and Birth Date selected");
     result = getSignFromBirthDate(dateInput.toString());
   } else if (dateInput) {
-    console.log("Only Birth Date selected");
     result = getSignFromBirthDate(dateInput.toString());
   } else if (signInput !== "default") {
-    console.log("Only Sign selected");
     result = spinMyWebOfFate(signInput);
   } else {
-    console.log("NEITHER, OR ERROR");
     result = null;
   }
 };
@@ -62,61 +57,48 @@ const determineInputSource = () => {
 
 const getSignFromBirthDate = (dateInput) => {
   const dateObject = new Date(dateInput);
-  const month = dateObject.toLocaleString("en-US", { month: "long" });
+  const month = dateObject.getMonth();
   const day = dateObject.getDate();
 
-  let userSign = "";
+  const zodiacSigns = [
+    "Capricorn",
+    "Aquarius",
+    "Pisces",
+    "Aries",
+    "Taurus",
+    "Gemini",
+    "Cancer",
+    "Leo",
+    "Virgo",
+    "Libra",
+    "Scorpio",
+    "Sagittarius",
+  ];
 
-  if (month == "January") {
-    if (day < 20) userSign = "Capricorn";
-    else userSign = "Aquarius";
-  } else if (month == "February") {
-    if (day < 19) userSign = "Aquarius";
-    else userSign = "Pisces";
-  } else if (month == "March") {
-    if (day < 21) userSign = "Pisces";
-    else userSign = "Aries";
-  } else if (month == "April") {
-    if (day < 20) userSign = "Aries";
-    else userSign = "Taurus";
-  } else if (month == "May") {
-    if (day < 21) userSign = "Taurus";
-    else userSign = "Gemini";
-  } else if (month == "June") {
-    if (day < 21) userSign = "Gemini";
-    else userSign = "Cancer";
-  } else if (month == "July") {
-    if (day < 23) userSign = "Cancer";
-    else userSign = "Leo";
-  } else if (month == "August") {
-    if (day < 23) userSign = "Leo";
-    else userSign = "Virgo";
-  } else if (month == "September") {
-    if (day < 23) userSign = "Virgo";
-    else userSign = "Libra";
-  } else if (month == "October") {
-    if (day < 23) userSign = "Libra";
-    else userSign = "Scorpio";
-  } else if (month == "November") {
-    if (day < 22) userSign = "Scorpio";
-    else userSign = "Sagittarius";
-  } else if (month == "December") {
-    if (day < 22) userSign = "Sagittarius";
-    else userSign = "Capricorn";
-  } else {
-    console.log("Something else happened, I guess");
-  }
+  const signIndex =
+    (day < [20, 19, 21, 20, 21, 21, 23, 23, 23, 23, 22, 22][month]
+      ? month - 1
+      : month) % 12;
 
+  const userSign = zodiacSigns[signIndex];
   spinMyWebOfFate(userSign);
 };
 
 // Function to call upon the heavens and deliver their message
 
 const spinMyWebOfFate = (getSign) => {
-  const randomSub = Math.floor(Math.random() * horoscopeSubject.length);
-  const randomBeg = Math.floor(Math.random() * horoscopeBeginning.length);
-  const randomMid = Math.floor(Math.random() * horoscopeMiddle.length);
-  const randomEnd = Math.floor(Math.random() * horoscopeEnd.length);
+  if (getSign === "default") {
+    alert("You need to select your sign!");
+    return;
+  }
+
+  const getRandomIndex = (array) => Math.floor(Math.random() * array.length);
+
+  const randomSub = getRandomIndex(horoscopeSubject);
+  const randomBeg = getRandomIndex(horoscopeBeginning);
+  const randomMid = getRandomIndex(horoscopeMiddle);
+  const randomEnd = getRandomIndex(horoscopeEnd);
+
   const strangeAlbert = document.querySelector("#peculiar-albert");
 
   const newHoroscope = `${getSign.toUpperCase()}: ${
@@ -125,16 +107,13 @@ const spinMyWebOfFate = (getSign) => {
     horoscopeEnd[randomEnd]
   }`;
 
-  if (getSign === "default") {
-    alert("You need to select your sign!");
-  } else {
-    document.querySelector("#horoscope-container").innerHTML = newHoroscope;
+  const horoscopeContainer = document.querySelector("#horoscope-container");
+  horoscopeContainer.innerHTML = newHoroscope;
 
-    if (strangeAlbert.style.display === "none") {
-      strangeAlbert.style.display = "block";
-      setTimeout(() => {
-        strangeAlbert.style.display === "block";
-      }, 5000);
-    }
+  if (strangeAlbert.style.display === "none") {
+    strangeAlbert.style.display = "block";
+    setTimeout(() => {
+      strangeAlbert.style.display = "none";
+    }, 5000);
   }
 };
