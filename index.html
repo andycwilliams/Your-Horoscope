@@ -70,17 +70,21 @@
             <div class="w3-text-grey">Choose it</div>
           </div>
           <br />
-          <p class="w3-text-grey">
+          <p for="birthday-selector" class="w3-text-grey">
             Does the celestial plane obscure knowledge of your sign? Select your
             birth date instead, and we shall divine the answer!
             <br />
-            <input id="birthday-selector" class="w3-input inputs" type="date" />
+            <input
+              id="birth-date-selector"
+              class="w3-input inputs"
+              type="date"
+            />
           </p>
           <br />
           <button
             id="generate-horoscope-button"
             class="w3-btn w3-orange inputs"
-            onclick="getZodiacSign()"
+            onclick="determineInputSource()"
           >
             <i>O Spirits, Tell Me My Fortune!</i>
           </button>
